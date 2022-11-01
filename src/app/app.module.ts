@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RelojComponent } from './reloj/reloj.component';
+import { FechasService } from './services/fechas.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RelojComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [FechasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
